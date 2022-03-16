@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello HomeController!{% endblock %}
+
+{% block body %}
+
+    <div style="display: flex; flex-direction: column">
+
+    <div><h1 style="margin-bottom: 2em;font-size: 25px">Liste des médiations dans lequels vous êtes impliqué</h1></div>
+        <div style="display: flex; flex-direction: row">
+    {% for item in mediations %}
+        <div class="item">
+        {{item.particulierPrenom}}
+        vs
+        {{item.entreprisenom}}
+        <a href="{{ path('app_mediation', {id:item.id}) }}">Voir plus de détails</a>
+        </div>
+    {% endfor %}
+    </div>
+    </div>
+
+
+
+{% endblock %}

@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MediationController!{% endblock %}
+
+{% block body %}
+
+    <section class="title-mediations">
+        <h1>Mediation numéro : {{ mediation.id }}</h1>
+    </section>
+
+    <section class="section-infos-mediations">
+        <h2>Information sur le demandeur de mediation</h2>
+        <p>{{ mediation.particulierNom }}</p>
+        <p>{{ mediation.particulierPrenom }}</p>
+        <p>{{ mediation.particulierEmail }}</p>
+        <p>{{ mediation.particulierTel }}</p>
+        <p>{{ mediation.particulierAvocat }}</p>
+    </section>
+
+    <section class="section-infos-mediations">
+        <h2>Information sur l'entreprise de mediation</h2>
+        <p>{{ mediation.entrepriseNom }}</p>
+        <p>{{ mediation.entrepriseEmail }}</p>
+        <p>{{ mediation.entrepriseTel }}</p>
+        <p>{{ mediation.entrepriseAvocat }}</p>
+    </section>
+
+    <section class="section-infos-mediations">
+        <h2>Information sur générale de mediation</h2>
+        <p>{{ mediation.article }}</p>
+        <p>{{ mediation.paiement }}</p>
+        <p>{{ mediation.remboursement }}</p>
+    </section>
+
+
+
+
+{% if app.user.id == mediation.userId.id%}
+        <a class="btn-custom" href="{{ path('app_mediation_edit', {id:mediation.id}) }}">Modifier la mediation</a>
+    {% endif %}
+
+
+{% endblock %}

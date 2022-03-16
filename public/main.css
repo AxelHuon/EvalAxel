@@ -1,0 +1,62 @@
+body{
+    font-family: sans-serif !important;
+}
+
+.section-infos-mediations{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4em;
+}
+
+.section-infos-mediations p{
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.section-infos-mediations h2{
+    font-size: 20px;
+}
+
+.btn-custom{
+    padding: 0.5em 2em;
+    color: white;
+    background: dodgerblue;
+    margin-top: 2em;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#mediation_edit > div{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+
+}
+
+#mediation_edit > div label{
+    font-weight: 700;
+    margin-bottom: 1em;
+    font-size: 14px;
+}
+
+#mediation_edit > div input{
+
+    width: 20%;
+    padding: 0.3em;
+    border-radius: 0;
+    border: none;
+    border-bottom: 1px solid black;
+}
+
+#mediation_edit_save{
+    width: min-content;
+}
+
+.item{
+    border: 1px solid black;
+    margin-bottom: 2em;
+    width: min-content;
+    padding: 1em;
+    margin-right: 1em;
+}
